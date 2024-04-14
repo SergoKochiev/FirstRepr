@@ -1,0 +1,697 @@
+[33mcommit eed5ebc66b6fb8845f23af91a3e757c8b8a04508[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Sergey Kochiev <vuvuzela0065@gmail.com>
+Date:   Sat Apr 13 19:37:42 2024 +0300
+
+    First Commit:new
+
+[1mdiff --git a/Graf.pro b/Graf.pro[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e87047d[m
+[1m--- /dev/null[m
+[1m+++ b/Graf.pro[m
+[36m@@ -0,0 +1,41 @@[m
+[32m+[m[32m#-------------------------------------------------[m
+[32m+[m[32m#[m
+[32m+[m[32m# Project created by QtCreator 2022-04-25T15:47:34[m
+[32m+[m[32m#[m
+[32m+[m[32m#-------------------------------------------------[m
+[32m+[m
+[32m+[m[32mQT       += core gui[m
+[32m+[m[32mQT    += charts[m
+[32m+[m
+[32m+[m[32mgreaterThan(QT_MAJOR_VERSION, 4): QT += widgets[m
+[32m+[m
+[32m+[m[32mTARGET = Graf[m
+[32m+[m[32mTEMPLATE = app[m
+[32m+[m
+[32m+[m[32m# The following define makes your compiler emit warnings if you use[m
+[32m+[m[32m# any feature of Qt which has been marked as deprecated (the exact warnings[m
+[32m+[m[32m# depend on your compiler). Please consult the documentation of the[m
+[32m+[m[32m# deprecated API in order to know how to port your code away from it.[m
+[32m+[m[32mDEFINES += QT_DEPRECATED_WARNINGS[m
+[32m+[m
+[32m+[m[32m# You can also make your code fail to compile if you use deprecated APIs.[m
+[32m+[m[32m# In order to do so, uncomment the following line.[m
+[32m+[m[32m# You can also select to disable deprecated APIs only up to a certain version of Qt.[m
+[32m+[m[32m#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0[m
+[32m+[m
+[32m+[m[32mCONFIG += c++11[m
+[32m+[m
+[32m+[m[32mSOURCES += \[m
+[32m+[m[32m        main.cpp \[m
+[32m+[m[32m        mainwindow.cpp[m
+[32m+[m
+[32m+[m[32mHEADERS += \[m
+[32m+[m[32m        mainwindow.h[m
+[32m+[m
+[32m+[m[32mFORMS += \[m
+[32m+[m[32m        mainwindow.ui[m
+[32m+[m
+[32m+[m[32m# Default rules for deployment.[m
+[32m+[m[32mqnx: target.path = /tmp/$${TARGET}/bin[m
+[32m+[m[32melse: unix:!android: target.path = /opt/$${TARGET}/bin[m
+[32m+[m[32m!isEmpty(target.path): INSTALLS += target[m
+[1mdiff --git a/Graf.pro.user b/Graf.pro.user[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1b4c369[m
+[1m--- /dev/null[m
+[1m+++ b/Graf.pro.user[m
+[36m@@ -0,0 +1,337 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<!DOCTYPE QtCreatorProject>[m
+[32m+[m[32m<!-- Written by QtCreator 4.9.1, 2022-05-03T17:49:40. -->[m
+[32m+[m[32m<qtcreator>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>EnvironmentId</variable>[m
+[32m+[m[32m  <value type="QByteArray">{098a8d8e-6440-4111-b363-75f132c31a4e}</value>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>ProjectExplorer.Project.ActiveTarget</variable>[m
+[32m+[m[32m  <value type="int">0</value>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>ProjectExplorer.Project.EditorSettings</variable>[m
+[32m+[m[32m  <valuemap type="QVariantMap">[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.AutoIndent">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.AutoSpacesForTabs">false</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.CamelCaseNavigation">true</value>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="EditorConfiguration.CodeStyle.0">[m
+[32m+[m[32m    <value type="QString" key="language">Cpp</value>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="value">[m
+[32m+[m[32m     <value type="QByteArray" key="CurrentPreferences">CppGlobal</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="EditorConfiguration.CodeStyle.1">[m
+[32m+[m[32m    <value type="QString" key="language">QmlJS</value>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="value">[m
+[32m+[m[32m     <value type="QByteArray" key="CurrentPreferences">QmlJSGlobal</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.CodeStyle.Count">2</value>[m
+[32m+[m[32m   <value type="QByteArray" key="EditorConfiguration.Codec">UTF-8</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.ConstrainTooltips">false</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.IndentSize">4</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.KeyboardTooltips">false</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.MarginColumn">80</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.MouseHiding">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.MouseNavigation">true</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.PaddingMode">1</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.ScrollWheelZooming">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.ShowMargin">false</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.SmartBackspaceBehavior">0</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.SmartSelectionChanging">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.SpacesForTabs">true</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.TabKeyBehavior">0</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.TabSize">8</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.UseGlobal">true</value>[m
+[32m+[m[32m   <value type="int" key="EditorConfiguration.Utf8BomBehavior">1</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.addFinalNewLine">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.cleanIndentation">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.cleanWhitespace">true</value>[m
+[32m+[m[32m   <value type="bool" key="EditorConfiguration.inEntireDocument">false</value>[m
+[32m+[m[32m  </valuemap>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>ProjectExplorer.Project.PluginSettings</variable>[m
+[32m+[m[32m  <valuemap type="QVariantMap">[m
+[32m+[m[32m   <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey">[m
+[32m+[m[32m    <value type="QString">-fno-delayed-template-parsing</value>[m
+[32m+[m[32m   </valuelist>[m
+[32m+[m[32m   <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>[m
+[32m+[m[32m  </valuemap>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>ProjectExplorer.Project.Target.0</variable>[m
+[32m+[m[32m  <valuemap type="QVariantMap">[m
+[32m+[m[32m   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop Qt 5.13.0 MinGW 32-bit</value>[m
+[32m+[m[32m   <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop Qt 5.13.0 MinGW 32-bit</value>[m
+[32m+[m[32m   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">qt.qt5.5130.win32_mingw73_kit</value>[m
+[32m+[m[32m   <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>[m
+[32m+[m[32m   <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>[m
+[32m+[m[32m   <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Sergey/Desktop/STUDY/QT/build-Graf-Desktop_Qt_5_13_0_MinGW_32_bit-Debug</value>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">qmake</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QtProjectManager.QMakeBuildStep</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.LinkQmlDebuggingLibrary">true</value>[m
+[32m+[m[32m      <value type="QString" key="QtProjectManager.QMakeBuildStep.QMakeArguments"></value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.SeparateDebugInfo">false</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.UseQtQuickCompiler">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.MakeStep</value>[m
+[32m+[m[32m      <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.BuildTargets"/>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">false</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments"></value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand"></value>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.OverrideMakeflags">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">2</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.MakeStep</value>[m
+[32m+[m[32m      <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.BuildTargets"/>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">true</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments">clean</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand"></value>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.OverrideMakeflags">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Очистка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>[m
+[32m+[m[32m    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Отладка</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Отладка</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>[m
+[32m+[m[32m    <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>[m
+[32m+[m[32m    <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Sergey/Desktop/STUDY/QT/build-Graf-Desktop_Qt_5_13_0_MinGW_32_bit-Release</value>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">qmake</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QtProjectManager.QMakeBuildStep</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.LinkQmlDebuggingLibrary">false</value>[m
+[32m+[m[32m      <value type="QString" key="QtProjectManager.QMakeBuildStep.QMakeArguments"></value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.SeparateDebugInfo">false</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.UseQtQuickCompiler">true</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.MakeStep</value>[m
+[32m+[m[32m      <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.BuildTargets"/>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">false</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments"></value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand"></value>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.OverrideMakeflags">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">2</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.MakeStep</value>[m
+[32m+[m[32m      <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.BuildTargets"/>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">true</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments">clean</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand"></value>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.OverrideMakeflags">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Очистка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>[m
+[32m+[m[32m    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Выпуск</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Выпуск</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>[m
+[32m+[m[32m    <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">0</value>[m
+[32m+[m[32m    <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Sergey/Desktop/STUDY/QT/build-Graf-Desktop_Qt_5_13_0_MinGW_32_bit-Profile</value>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">qmake</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">QtProjectManager.QMakeBuildStep</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.LinkQmlDebuggingLibrary">true</value>[m
+[32m+[m[32m      <value type="QString" key="QtProjectManager.QMakeBuildStep.QMakeArguments"></value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.QMakeForced">false</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.SeparateDebugInfo">true</value>[m
+[32m+[m[32m      <value type="bool" key="QtProjectManager.QMakeBuildStep.UseQtQuickCompiler">true</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.1">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.MakeStep</value>[m
+[32m+[m[32m      <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.BuildTargets"/>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">false</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments"></value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand"></value>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.OverrideMakeflags">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">2</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Build</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.1">[m
+[32m+[m[32m     <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">[m
+[32m+[m[32m      <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Сборка</value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m      <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.MakeStep</value>[m
+[32m+[m[32m      <valuelist type="QVariantList" key="Qt4ProjectManager.MakeStep.BuildTargets"/>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.Clean">true</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeArguments">clean</value>[m
+[32m+[m[32m      <value type="QString" key="Qt4ProjectManager.MakeStep.MakeCommand"></value>[m
+[32m+[m[32m      <value type="bool" key="Qt4ProjectManager.MakeStep.OverrideMakeflags">false</value>[m
+[32m+[m[32m     </valuemap>[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">1</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Очистка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Clean</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>[m
+[32m+[m[32m    <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Профилирование</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Профилирование</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>[m
+[32m+[m[32m    <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">0</value>[m
+[32m+[m[32m    <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <value type="int" key="ProjectExplorer.Target.BuildConfigurationCount">3</value>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="ProjectExplorer.Target.DeployConfiguration.0">[m
+[32m+[m[32m    <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">[m
+[32m+[m[32m     <value type="int" key="ProjectExplorer.BuildStepList.StepsCount">0</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Установка</value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.BuildSteps.Deploy</value>[m
+[32m+[m[32m    </valuemap>[m
+[32m+[m[32m    <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">1</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Конфигурация установки</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.DefaultDeployConfiguration</value>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <value type="int" key="ProjectExplorer.Target.DeployConfigurationCount">1</value>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="ProjectExplorer.Target.PluginSettings"/>[m
+[32m+[m[32m   <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.0">[m
+[32m+[m[32m    <value type="QString" key="Analyzer.Perf.CallgraphMode">dwarf</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="Analyzer.Perf.Events">[m
+[32m+[m[32m     <value type="QString">cpu-cycles</value>[m
+[32m+[m[32m    </valuelist>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="Analyzer.Perf.ExtraArguments"/>[m
+[32m+[m[32m    <value type="int" key="Analyzer.Perf.Frequency">250</value>[m
+[32m+[m[32m    <value type="QString" key="Analyzer.Perf.SampleMode">-F</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Perf.Settings.UseGlobalSettings">true</value>[m
+[32m+[m[32m    <value type="int" key="Analyzer.Perf.StackSize">4096</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.QmlProfiler.AggregateTraces">false</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.QmlProfiler.FlushEnabled">false</value>[m
+[32m+[m[32m    <value type="uint" key="Analyzer.QmlProfiler.FlushInterval">1000</value>[m
+[32m+[m[32m    <value type="QString" key="Analyzer.QmlProfiler.LastTraceFile"></value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.QmlProfiler.Settings.UseGlobalSettings">true</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="Analyzer.Valgrind.AddedSuppressionFiles"/>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.Callgrind.CollectBusEvents">false</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.Callgrind.CollectSystime">false</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.Callgrind.EnableBranchSim">false</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.Callgrind.EnableCacheSim">false</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.Callgrind.EnableEventToolTips">true</value>[m
+[32m+[m[32m    <value type="double" key="Analyzer.Valgrind.Callgrind.MinimumCostRatio">0.01</value>[m
+[32m+[m[32m    <value type="double" key="Analyzer.Valgrind.Callgrind.VisualisationMinimumCostRatio">10</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.FilterExternalIssues">true</value>[m
+[32m+[m[32m    <value type="QString" key="Analyzer.Valgrind.KCachegrindExecutable">kcachegrind</value>[m
+[32m+[m[32m    <value type="int" key="Analyzer.Valgrind.LeakCheckOnFinish">1</value>[m
+[32m+[m[32m    <value type="int" key="Analyzer.Valgrind.NumCallers">25</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="Analyzer.Valgrind.RemovedSuppressionFiles"/>[m
+[32m+[m[32m    <value type="int" key="Analyzer.Valgrind.SelfModifyingCodeDetection">1</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.Settings.UseGlobalSettings">true</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.ShowReachable">false</value>[m
+[32m+[m[32m    <value type="bool" key="Analyzer.Valgrind.TrackOrigins">true</value>[m
+[32m+[m[32m    <value type="QString" key="Analyzer.Valgrind.ValgrindExecutable">valgrind</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="Analyzer.Valgrind.VisibleErrorKinds">[m
+[32m+[m[32m     <value type="int">0</value>[m
+[32m+[m[32m     <value type="int">1</value>[m
+[32m+[m[32m     <value type="int">2</value>[m
+[32m+[m[32m     <value type="int">3</value>[m
+[32m+[m[32m     <value type="int">4</value>[m
+[32m+[m[32m     <value type="int">5</value>[m
+[32m+[m[32m     <value type="int">6</value>[m
+[32m+[m[32m     <value type="int">7</value>[m
+[32m+[m[32m     <value type="int">8</value>[m
+[32m+[m[32m     <value type="int">9</value>[m
+[32m+[m[32m     <value type="int">10</value>[m
+[32m+[m[32m     <value type="int">11</value>[m
+[32m+[m[32m     <value type="int">12</value>[m
+[32m+[m[32m     <value type="int">13</value>[m
+[32m+[m[32m     <value type="int">14</value>[m
+[32m+[m[32m    </valuelist>[m
+[32m+[m[32m    <value type="int" key="PE.EnvironmentAspect.Base">2</value>[m
+[32m+[m[32m    <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Graf</value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>[m
+[32m+[m[32m    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Sergey/Desktop/STUDY/QT/Graf/Graf.pro</value>[m
+[32m+[m[32m    <value type="QString" key="RunConfiguration.Arguments"></value>[m
+[32m+[m[32m    <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>[m
+[32m+[m[32m    <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>[m
+[32m+[m[32m    <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>[m
+[32m+[m[32m    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>[m
+[32m+[m[32m    <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>[m
+[32m+[m[32m    <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>[m
+[32m+[m[32m    <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>[m
+[32m+[m[32m    <value type="QString" key="RunConfiguration.WorkingDirectory"></value>[m
+[32m+[m[32m    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Sergey/Desktop/STUDY/QT/build-Graf-Desktop_Qt_5_13_0_MinGW_32_bit-Debug</value>[m
+[32m+[m[32m   </valuemap>[m
+[32m+[m[32m   <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>[m
+[32m+[m[32m  </valuemap>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>ProjectExplorer.Project.TargetCount</variable>[m
+[32m+[m[32m  <value type="int">1</value>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>ProjectExplorer.Project.Updater.FileVersion</variable>[m
+[32m+[m[32m  <value type="int">21</value>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m <data>[m
+[32m+[m[32m  <variable>Version</variable>[m
+[32m+[m[32m  <value type="int">21</value>[m
+[32m+[m[32m </data>[m
+[32m+[m[32m</qtcreator>[m
+[1mdiff --git a/main.cpp b/main.cpp[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b48f94e[m
+[1m--- /dev/null[m
+[1m+++ b/main.cpp[m
+[36m@@ -0,0 +1,11 @@[m
+[32m+[m[32m#include "mainwindow.h"[m
+[32m+[m[32m#include <QApplication>[m
+[32m+[m
+[32m+[m[32mint main(int argc, char *argv[])[m
+[32m+[m[32m{[m
+[32m+[m[32m    QApplication a(argc, argv);[m
+[32m+[m[32m    MainWindow w;[m
+[32m+[m[32m    w.show();[m
+[32m+[m
+[32m+[m[32m    return a.exec();[m
+[32m+[m[32m}[m
+[1mdiff --git a/mainwindow.cpp b/mainwindow.cpp[m
+[1mnew file mode 100644[m
+[1mindex 0000000..264a880[m
+[1m--- /dev/null[m
+[1m+++ b/mainwindow.cpp[m
+[36m@@ -0,0 +1,87 @@[m
+[32m+[m[32m#include "mainwindow.h"[m
+[32m+[m[32m#include "ui_mainwindow.h"[m
+[32m+[m
+[32m+[m[32m#include <QChartView>[m
+[32m+[m[32m#include <QLineSeries>[m
+[32m+[m[32m#include <QDebug>[m
+[32m+[m
+[32m+[m
+[32m+[m[32mMainWindow::MainWindow(QWidget *parent) :[m
+[32m+[m[32m    QMainWindow(parent),[m
+[32m+[m[32m    ui(new Ui::MainWindow)[m
+[32m+[m[32m{[m
+[32m+[m[32m    ui->setupUi(this);[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m//    NewChar->addSeries(NewLine);[m
+[32m+[m[32m//    NewChar->addSeries(NewLine2);[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    connect(ui->ButtonAdd, SIGNAL(clicked(bool)), this, SLOT( NewCharF() ));[m
+[32m+[m[32m    connect(ui->ButtonDelete, SIGNAL(clicked(bool)), this, SLOT( Delete() ));[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32mvoid MainWindow::NewCharF()[m
+[32m+[m[32m{[m
+[32m+[m
+[32m+[m[32m  NewChar = new QChart ();[m
+[32m+[m[32m  ChartView =  new QChartView ();[m
+[32m+[m
+[32m+[m[32m  qDebug()<< (NewChar) ;[m
+[32m+[m[32m  qDebug()<< (ChartView) ;[m
+[32m+[m
+[32m+[m[32m    ChartView->setChart(NewChar);[m
+[32m+[m
+[32m+[m[32m    ui->LayoutChar->addWidget(ChartView);[m
+[32m+[m
+[32m+[m[32m    QLineSeries* NewLine = new QLineSeries();[m
+[32m+[m[32m   // QLineSeries* NewLine2 = new QLineSeries();[m
+[32m+[m[32m    int X1, X2, X3, Y1, Y2, Y3;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    X1 = ui->LineX1->text().toInt();[m
+[32m+[m[32m    Y1 = ui->LineY1->text().toInt();[m
+[32m+[m
+[32m+[m[32m    X2 = ui->LineX2->text().toInt();[m
+[32m+[m[32m    Y2 = ui->LineY2->text().toInt();[m
+[32m+[m
+[32m+[m[32m    X3 = ui->LineX3->text().toInt();[m
+[32m+[m[32m    Y3 = ui->LineY3->text().toInt();[m
+[32m+[m
+[32m+[m[32m    NewLine->append(X1, Y1);[m
+[32m+[m[32m    NewLine->append(X2, Y2);[m
+[32m+[m[32m    NewLine->append(X3, Y3);[m
+[32m+[m
+[32m+[m[32m    NewChar->addSeries(NewLine);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    axisX->setTickCount(1);[m
+[32m+[m[32m    axisY->setTickCount(1);[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    NewChar->createDefaultAxes();[m
+[32m+[m
+[32m+[m[32m    qDebug()<<X2<<Y2;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mvoid MainWindow::Delete()[m
+[32m+[m[32m{[m
+[32m+[m[32m    delete NewChar; // удаление плоскости графика[m
+[32m+[m[32m    delete ChartView; // удаление представления[m
+[32m+[m[32m    NewChar =0;[m
+[32m+[m[32m    ChartView = 0;[m
+[32m+[m[32m    qDebug()<< (NewChar) ;[m
+[32m+[m[32m    qDebug()<< (ChartView) ;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mMainWindow::~MainWindow()[m
+[32m+[m[32m{[m
+[32m+[m[32m    delete ui;[m
+[32m+[m[32m}[m
+[1mdiff --git a/mainwindow.h b/mainwindow.h[m
+[1mnew file mode 100644[m
+[1mindex 0000000..40d2099[m
+[1m--- /dev/null[m
+[1m+++ b/mainwindow.h[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m#ifndef MAINWINDOW_H[m
+[32m+[m[32m#define MAINWINDOW_H[m
+[32m+[m
+[32m+[m[32m#include <QMainWindow>[m
+[32m+[m[32m#include <QtCharts>[m
+[32m+[m
+[32m+[m
+[32m+[m[32mnamespace Ui {[m
+[32m+[m[32mclass MainWindow;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mclass MainWindow : public QMainWindow[m
+[32m+[m[32m{[m
+[32m+[m[32m    Q_OBJECT[m
+[32m+[m
+[32m+[m[32mpublic:[m
+[32m+[m[32m    explicit MainWindow(QWidget *parent = nullptr);[m
+[32m+[m[32m    ~MainWindow();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    QValueAxis* axisX =  new QValueAxis ();[m
+[32m+[m[32m    QValueAxis* axisY =  new QValueAxis ();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    QChart* NewChar= 0 ;[m
+[32m+[m[32m    QChartView* ChartView =0 ;[m
+[32m+[m
+[32m+[m[32mprivate:[m
+[32m+[m[32m    Ui::MainWindow *ui;[m
+[32m+[m
+[32m+[m[32mpublic slots:[m
+[32m+[m[32m   void NewCharF();[m
+[32m+[m[32m   void Delete();[m
+[32m+[m[32m};[m
+[32m+[m
+[32m+[m[32m#endif // MAINWINDOW_H[m
+[1mdiff --git a/mainwindow.ui b/mainwindow.ui[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8e34a08[m
+[1m--- /dev/null[m
+[1m+++ b/mainwindow.ui[m
+[36m@@ -0,0 +1,143 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<ui version="4.0">[m
+[32m+[m[32m <class>MainWindow</class>[m
+[32m+[m[32m <widget class="QMainWindow" name="MainWindow">[m
+[32m+[m[32m  <property name="geometry">[m
+[32m+[m[32m   <rect>[m
+[32m+[m[32m    <x>0</x>[m
+[32m+[m[32m    <y>0</y>[m
+[32m+[m[32m    <width>894</width>[m
+[32m+[m[32m    <height>506</height>[m
+[32m+[m[32m   </rect>[m
+[32m+[m[32m  </property>[m
+[32m+[m[32m  <property name="windowTitle">[m
+[32m+[m[32m   <string>MainWindow</string>[m
+[32m+[m[32m  </property>[m
+[32m+[m[32m  <widget class="QWidget" name="centralWidget">[m
+[32m+[m[32m   <widget class="QWidget" name="verticalLayoutWidget">[m
+[32m+[m[32m    <property name="geometry">[m
+[32m+[m[32m     <rect>[m
+[32m+[m[32m      <x>180</x>[m
+[32m+[m[32m      <y>10</y>[m
+[32m+[m[32m      <width>701</width>[m
+[32m+[m[32m      <height>461</height>[m
+[32m+[m[32m     </rect>[m
+[32m+[m[32m    </property>[m
+[32m+[m[32m    <layout class="QVBoxLayout" name="LayoutChar">[m
+[32m+[m[32m     <property name="sizeConstraint">[m
+[32m+[m[32m      <enum>QLayout::SetFixedSize</enum>[m
+[32m+[m[32m     </property>[m
+[32m+[m[32m    </layout>[m
+[32m+[m[32m   </widget>[m
+[32m+[m[32m   <widget class="QWidget" name="layoutWidget">[m
+[32m+[m[32m    <property name="geometry">[m
+[32m+[m[32m     <rect>[m
+[32m+[m[32m      <x>10</x>[m
+[32m+[m[32m      <y>10</y>[m
+[32m+[m[32m      <width>161</width>[m
+[32m+[m[32m      <height>141</height>[m
+[32m+[m[32m     </rect>[m
+[32m+[m[32m    </property>[m
+[32m+[m[32m    <layout class="QVBoxLayout" name="verticalLayout">[m
+[32m+[m[32m     <item>[m
+[32m+[m[32m      <layout class="QHBoxLayout" name="horizontalLayout">[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLabel" name="LabelX">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>X</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLineEdit" name="LineX1">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>12</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLineEdit" name="LineX2">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>3</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLineEdit" name="LineX3">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>12</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m      </layout>[m
+[32m+[m[32m     </item>[m
+[32m+[m[32m     <item>[m
+[32m+[m[32m      <layout class="QHBoxLayout" name="horizontalLayout_2">[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLabel" name="LabelY">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>Y</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLineEdit" name="LineY1">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>45</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLineEdit" name="LineY2">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>7</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m       <item>[m
+[32m+[m[32m        <widget class="QLineEdit" name="LineY3">[m
+[32m+[m[32m         <property name="text">[m
+[32m+[m[32m          <string>43</string>[m
+[32m+[m[32m         </property>[m
+[32m+[m[32m        </widget>[m
+[32m+[m[32m       </item>[m
+[32m+[m[32m      </layout>[m
+[32m+[m[32m     </item>[m
+[32m+[m[32m     <item>[m
+[32m+[m[32m      <widget class="QPushButton" name="ButtonAdd">[m
+[32m+[m[32m       <property name="text">[m
+[32m+[m[32m        <string>Новый график</string>[m
+[32m+[m[32m       </property>[m
+[32m+[m[32m      </widget>[m
+[32m+[m[32m     </item>[m
+[32m+[m[32m    </layout>[m
+[32m+[m[32m   </widget>[m
+[32m+[m[32m   <widget class="QPushButton" name="ButtonDelete">[m
+[32m+[m[32m    <property name="geometry">[m
+[32m+[m[32m     <rect>[m
+[32m+[m[32m      <x>40</x>[m
+[32m+[m[32m      <y>230</y>[m
+[32m+[m[32m      <width>80</width>[m
+[32m+[m[32m      <height>21</height>[m
+[32m+[m[32m     </rect>[m
+[32m+[m[32m    </property>[m
+[32m+[m[32m    <property name="text">[m
+[32m+[m[32m     <string>Удалить</string>[m
+[32m+[m[32m    </property>[m
+[32m+[m[32m   </widget>[m
+[32m+[m[32m  </widget>[m
+[32m+[m[32m  <widget class="QMenuBar" name="menuBar">[m
+[32m+[m[32m   <property name="geometry">[m
+[32m+[m[32m    <rect>[m
+[32m+[m[32m     <x>0</x>[m
+[32m+[m[32m     <y>0</y>[m
+[32m+[m[32m     <width>894</width>[m
+[32m+[m[32m     <height>20</height>[m
+[32m+[m[32m    </rect>[m
+[32m+[m[32m   </property>[m
+[32m+[m[32m  </widget>[m
+[32m+[m[32m </widget>[m
+[32m+[m[32m <layoutdefault spacing="6" margin="11"/>[m
+[32m+[m[32m <resources/>[m
+[32m+[m[32m <connections/>[m
+[32m+[m[32m</ui>[m
